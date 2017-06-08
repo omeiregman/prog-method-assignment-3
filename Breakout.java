@@ -79,22 +79,28 @@ public class Breakout extends GraphicsProgram {
 		double xCenter = canvasWidth/2;
 		double yCenter = canvasHeight/2;
 		
+		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
+		double colStart = BRICK_Y_OFFSET;
 		
-		
-		
+		double rowPosition = BRICK_WIDTH + BRICK_SEP;
+		double colPosition = BRICK_HEIGHT + BRICK_SEP;
 		
 		for (int i=0; i<NBRICKS_PER_ROW; i++) {
 			
-			for (int j=0; j<NBRICK_ROWS; j++) {double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
-		double colStart = BRICK_Y_OFFSET;
-			double rowPosition = BRICK_WIDTH + BRICK_SEP;
-		double colPosition = BRICK_HEIGHT + BRICK_SEP;	
+			for (int j=0; j<NBRICK_ROWS; j++) {
+				
 			rowStart = i * (rowPosition);
 		    colStart = j * (colPosition);
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
-		add(myBricks);
-		
+		myBricks.setFilled(true);
+		if (rowStart>j*colPosition){
+			myBricks.setFillColor(Color.RED);
+		}
+			
+			
+			
+			add(myBricks);
 		}
 		}
 	}
