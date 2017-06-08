@@ -79,6 +79,7 @@ public class Breakout extends GraphicsProgram {
 		double rowStart = xCenter - (BRICK_WIDTH);
 		double colStart = 200;
 		
-		
+		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
+		add(myBricks);
 	}
 }
