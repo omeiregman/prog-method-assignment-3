@@ -73,6 +73,8 @@ public class Breakout extends GraphicsProgram {
 	add(myCanvas);		
 	}
 	
+	double center_X = getWidth();
+	double startPoint_X = center_X - (BRICK_WIDTH * NBRICK_ROWS)/2;
 	
 	
 }
