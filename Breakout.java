@@ -102,13 +102,13 @@ public class Breakout extends GraphicsProgram {
 		if (j == 3 || j ==4){
 			myBricks.setColor(Color.BLUE);
 		}
-		if (i == 5 || i == 6){
+		if (j == 5 || j == 6){
 			myBricks.setColor(Color.WHITE);		
 		}
-		if (i == 7 || i == 8){
+		if (j == 7 || j == 8){
 			myBricks.setColor(Color.RED);		
 		}
-		if (i == 9 || i == 10){
+		if (j == 9 || j == 10){
 			myBricks.setColor(Color.WHITE);		
 		}
 			
