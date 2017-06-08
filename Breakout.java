@@ -82,11 +82,11 @@ public class Breakout extends GraphicsProgram {
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
 		double colStart = BRICK_Y_OFFSET;
 		
-		double rowPosition = BRICK_WIDTH + BRICK_SEP;
-		double colPosition = BRICK_HEIGHT + BRICK_SEP;
+		
 		
 		for (int i=0; i<NBRICKS_PER_ROW; i++) {
-			
+			double rowPosition = BRICK_WIDTH + BRICK_SEP;
+		double colPosition = BRICK_HEIGHT + BRICK_SEP;
 			for (int j=0; j<NBRICK_ROWS; j++) {
 				
 			rowStart = i * (rowPosition);
