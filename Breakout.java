@@ -61,38 +61,10 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 
-		setBricks();
+		//setBricks();
 		
 		
 	}
 
-	public void setBricks(){
-		
-	GCanvas myCanvas = new GCanvas();
-	myCanvas.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-	add(myCanvas);		
 	
-	
-	double myIncrementor =0;
-	
-	double center_X = getWidth();
-	double startPoint_X = center_X - (BRICK_WIDTH * NBRICK_ROWS)/2;
-	double startPoint_Y = BRICK_Y_OFFSET;
-	
-	
-	for (int i=0; i<NBRICK_ROWS; i++){
-		myIncrementor ++;
-		
-		for (int j=0; j < myIncrementor; j++) {
-			
-			double xNewPosition = j * (BRICK_WIDTH) + BRICK_SEP;
-			
-			double yNewPosition = i * BRICK_HEIGHT;
-			
-		GRect myBricks = new GRect((xNewPosition + startPoint_X), (yNewPosition + startPoint_Y), BRICK_WIDTH, BRICK_HEIGHT);
-		add(myBricks);
-		}
-		
-	}
-}
 }
