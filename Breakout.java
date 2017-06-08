@@ -84,18 +84,20 @@ public class Breakout extends GraphicsProgram {
 		
 		double rowPosition = BRICK_WIDTH + BRICK_SEP;
 		double colPosition = BRICK_HEIGHT + BRICK_SEP;
-		
+		int colourInc = 0;
 		for (int i=0; i<NBRICKS_PER_ROW; i++) {
 			
 			for (int j=0; j<NBRICK_ROWS; j++) {
-				
+				colourInc++;
 			rowStart = i * (rowPosition);
 		    colStart = j * (colPosition);
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
 		myBricks.setFilled(true);
-		if (rowStart>j*rowPosition){
+		if (colourInc>20){
 			myBricks.setFillColor(Color.RED);
+		} else if (colourInc>40){
+			myBricks.setFillColor(Color.BLUE);	
 		}
 			
 			
