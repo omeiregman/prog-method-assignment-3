@@ -100,7 +100,7 @@ public class Breakout extends GraphicsProgram {
 			myBricks.setColor(Color.BLUE);
 		}
 			else if ((colStart == j*colPosition*3)){
-				myBricks.setColor(Color.BLUE);		
+				myBricks.setColor(Color.WHITE);		
 		}
 			
 			
