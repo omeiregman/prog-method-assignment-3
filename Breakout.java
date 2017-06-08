@@ -75,6 +75,21 @@ public class Breakout extends GraphicsProgram {
 	
 	double center_X = getWidth();
 	double startPoint_X = center_X - (BRICK_WIDTH * NBRICK_ROWS)/2;
+	double startPoint_Y = BRICK_Y_OFFSET;
 	
-	
+	int incrementor = 0;
+	for (int i=0; i<NBRICK_ROWS; i++){
+		incrementor ++;
+		
+		for (int j=0; j<incrementor; j++) {
+			
+			double xNewPosition = j * BRICK_WIDTH;
+			double yNewPosition = i * BRICK_HEIGHT;
+			
+		GRect myBricks = new GRect((xNewPosition + startPoint_X), (yNewPosition + startPoint_Y), BRICK_WIDTH, BRICK_HEIGHT);
+		add(myBrick);
+		}
+		
+	}
+}
 }
