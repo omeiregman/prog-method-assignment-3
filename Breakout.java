@@ -92,7 +92,7 @@ public class Breakout extends GraphicsProgram {
 			rowStart = i * (rowPosition);
 		    colStart = j * (colPosition);
 		    
-		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH-BRICK_SEP, BRICK_HEIGHT);
+		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
 		add(myBricks);
 		myBricks.setFilled(true);
 		
