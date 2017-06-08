@@ -96,19 +96,19 @@ public class Breakout extends GraphicsProgram {
 		add(myBricks);
 		myBricks.setFilled(true);
 		
-		if (colStart <= 2) {
+		if (colStart == 1 || colStart == 2) {
 			myBricks.setColor(Color.RED);
 		} 
-		if (((colStart == 4))){
+		if (((colStart == 3 || colStart ==4))){
 			myBricks.setColor(Color.BLUE);
 		}
-		if ((colStart == 6)){
+		if (colStart == 5 || colStart == 6){
 			myBricks.setColor(Color.WHITE);		
 		}
-		if ((colStart == 8)){
+		if (colStart == 7 || colStart == 8){
 			myBricks.setColor(Color.RED);		
 		}
-		if ((colStart == 9)){
+		if (colStart == 9 || colStart == 10){
 			myBricks.setColor(Color.WHITE);		
 		}
 			
