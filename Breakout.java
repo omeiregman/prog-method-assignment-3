@@ -78,7 +78,7 @@ public class Breakout extends GraphicsProgram {
 		double yCenter = canvasHeight/2;
 		
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICK_ROWS)/2;
-		double colStart = 50;
+		double colStart = BRICK_Y_OFFSET;
 		
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
 		add(myBricks);
