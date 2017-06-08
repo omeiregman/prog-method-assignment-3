@@ -93,16 +93,25 @@ public class Breakout extends GraphicsProgram {
 		    colStart = j * (colPosition);
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
+		add(myBricks);
 		myBricks.setFilled(true);
-		if (colStart == j*colPosition) {
-			myBricks.setFillColor(Color.RED);
-		} else if (((colStart == j*colPosition))){
+		
+		if (colStart == 2) {
+			myBricks.setColor(Color.RED);
+		} 
+		if (((colStart == 4))){
 			myBricks.setColor(Color.BLUE);
 		}
-			else if ((colStart == j*colPosition)){
+		if ((colStart == 6)){
 				myBricks.setColor(Color.WHITE);		
 		}
-			add(myBricks);
+		if ((colStart == 8)){
+			myBricks.setColor(Color.WHITE);		
+		}
+		if ((colStart == 9)){
+			myBricks.setColor(Color.WHITE);		
+		}
+			
 		}
 		}
 	}
