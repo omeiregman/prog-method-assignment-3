@@ -61,10 +61,24 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 
-		//setBricks();
-		
+		setBricks();
+
+
 		
 	}
 
-	
+	public void setBricks(){
+		
+		
+		double canvasWidth = getWidth();
+		double canvasHeight = getHeight();
+		
+		double xCenter = canvasWidth/2;
+		double yCenter = canvasHeight/2;
+		
+		double rowStart = xCenter - (BRICK_WIDTH);
+		double colStart = 200;
+		
+		
+	}
 }
