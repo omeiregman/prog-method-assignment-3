@@ -66,14 +66,15 @@ public class Breakout extends GraphicsProgram {
 
 		
 	}
+		private double canvasWidth = getWidth();
+		private double canvasHeight = getHeight();
 
 	public void setBricks(){
 		
 	//	GCanvas myCanvas = new GCanvas();
 	//	setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		
-		double canvasWidth = getWidth();
-		double canvasHeight = getHeight();
+		
 		
 		double xCenter = canvasWidth/2;
 		double yCenter = canvasHeight/2;
@@ -96,5 +97,18 @@ public class Breakout extends GraphicsProgram {
 		
 		}
 		}
+	}
+	
+	public void initPaddle(){
+		
+		
+		double paddleX = (canvasWidth/2) - PADDLE_WIDTH/2; 
+		double paddleY = PADDLE_Y_OFFSET;
+		
+		GRect myPaddle = new GRect (paddleX, paddleY, PADDLE_WIDTH, PADDLE_HEIGHT);
+		myPaddle.setFilled(true);
+		myPaddle.setColor(Color.BLACK);
+		add(myPaddle);
+		
 	}
 }
