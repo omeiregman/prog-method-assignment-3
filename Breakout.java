@@ -126,6 +126,5 @@ public class Breakout extends GraphicsProgram {
 		myPaddle.setFilled(true);
 		myPaddle.setColor(Color.BLACK);
 		add(myPaddle);
-		
 	}
 }
