@@ -85,8 +85,8 @@ public class Breakout extends GraphicsProgram {
 		
 		for (int j=0; j < myIncrementor; j++) {
 			
-			double xNewPosition = j * BRICK_WIDTH;
-			double yNewPosition = j * BRICK_HEIGHT;
+			double xNewPosition = i * BRICK_WIDTH;
+			double yNewPosition = i * BRICK_HEIGHT;
 			
 		GRect myBricks = new GRect((xNewPosition + startPoint_X), (yNewPosition + startPoint_Y), BRICK_WIDTH, BRICK_HEIGHT);
 		add(myBricks);
