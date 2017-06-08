@@ -69,6 +69,7 @@ public class Breakout extends GraphicsProgram {
 
 	public void setBricks(){
 		
+		//GCanvas myCanvas = new GCanvas();
 		
 		double canvasWidth = getWidth();
 		double canvasHeight = getHeight();
@@ -76,7 +77,7 @@ public class Breakout extends GraphicsProgram {
 		double xCenter = canvasWidth/2;
 		double yCenter = canvasHeight/2;
 		
-		double rowStart = xCenter - (BRICK_WIDTH);
+		double rowStart = xCenter - (BRICK_WIDTH * NBRICK_ROWS)/2;
 		double colStart = 200;
 		
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
