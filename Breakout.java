@@ -69,8 +69,8 @@ public class Breakout extends GraphicsProgram {
 
 	public void setBricks(){
 		
-		GCanvas myCanvas = new GCanvas();
-		myCanvas.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+	//	GCanvas myCanvas = new GCanvas();
+		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		
 		double canvasWidth = getWidth();
 		double canvasHeight = getHeight();
