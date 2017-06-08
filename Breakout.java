@@ -62,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 
 		setBricks();
-
+		initPaddle();
 
 		
 	}
