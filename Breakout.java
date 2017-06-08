@@ -60,7 +60,17 @@ public class Breakout extends GraphicsProgram {
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		/* You fill this in, along with any subsidiary methods */
+
+		
+		
+		
 	}
 
+	public void setBricks(){
+		
+	GCanvas myCanvas = new GCanvas();
+	myCanvas.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
+	add(myCanvas);		
+	}
+	
 }
