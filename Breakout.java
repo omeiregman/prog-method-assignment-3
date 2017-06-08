@@ -85,7 +85,7 @@ public class Breakout extends GraphicsProgram {
 		
 		for (int j=0; j < myIncrementor; j++) {
 			
-			double xNewPosition = j * BRICK_WIDTH;
+			double xNewPosition = j * (BRICK_WIDTH) + BRICK_SEP;
 			
 			double yNewPosition = i * BRICK_HEIGHT;
 			
