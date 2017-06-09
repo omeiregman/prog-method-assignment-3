@@ -79,8 +79,6 @@ public class Breakout extends GraphicsProgram {
 		setSize(WIDTH, HEIGHT);
 		
 		double xCenter = getWidth()/2;
-			
-				
 		double rowStart;
 		double colStart;
 		
@@ -135,7 +133,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void mouseEvent(MouseEvent e) {
-	myPaddle.setLocation(e.getX(), e.getY());
+	myPaddle.setLocation(getX(), getY());
 		
 	}
 	
