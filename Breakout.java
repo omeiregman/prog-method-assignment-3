@@ -71,19 +71,11 @@ public class Breakout extends GraphicsProgram {
 
 		
 	}
-		private double canvasWidth = getWidth();
-		private double canvasHeight = getHeight();
+	private double xCenter = WIDTH/2;
+	private double yCenter = HEIGHT/2;
 
 	public void setBricks(){
-		
-	
-		
-		println(WIDTH + "  " + HEIGHT);
-		
-		
-		double xCenter = WIDTH/2;
-		double yCenter = HEIGHT/2;
-		
+			
 		println(xCenter + "  " + yCenter + BRICK_WIDTH);
 		
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
