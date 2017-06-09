@@ -81,7 +81,7 @@ public class Breakout extends GraphicsProgram {
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
 		double colStart = BRICK_Y_OFFSET;
 		
-		double rowPosition = BRICK_WIDTH;
+		double rowPosition = BRICK_WIDTH + BRICK_SEP;
 		double colPosition = BRICK_HEIGHT + BRICK_SEP;
 		
 		for (int i=1; i<NBRICKS_PER_ROW+1; i++) {
@@ -121,7 +121,7 @@ public class Breakout extends GraphicsProgram {
 		double paddleX = (WIDTH/2) - (BRICK_WIDTH/2) ; 
 		double paddleY = (HEIGHT - PADDLE_HEIGHT/2)  - PADDLE_Y_OFFSET;
 		
-		GRect myPaddle = new GRect (paddleX, paddleY, PADDLE_WIDTH, PADDLE_HEIGHT);
+		GRect myPaddle = new GRect (paddleX, 600, PADDLE_WIDTH, PADDLE_HEIGHT);
 		myPaddle.setFilled(true);
 		myPaddle.setColor(Color.BLACK);
 		add(myPaddle);
