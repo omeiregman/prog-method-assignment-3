@@ -72,7 +72,7 @@ public class Breakout extends GraphicsProgram {
 
 		
 	}
-	
+	private GRect myPaddle;
 
 	public void setBricks(){
 		
@@ -131,15 +131,13 @@ public class Breakout extends GraphicsProgram {
 			
 	
 	}
+	
 	public void mouseMove(MouseEvent e) {
-	setSize(WIDTH, HEIGHT);
 	double paddleY = getHeight() - PADDLE_Y_OFFSET;
+	
 	myPaddle.setLocation(e.getX(), paddleY);
-
-	//label.setLabel(str);
 	}
 	
-	private GRect myPaddle;
-	private GLabel label;
-}
+	
 
+}
