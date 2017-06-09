@@ -72,7 +72,7 @@ public class Breakout extends GraphicsProgram {
 		setBricks();
 		initPaddle();
 		putBall();
-		
+		startGame();
 
 		
 	}
@@ -145,9 +145,22 @@ public class Breakout extends GraphicsProgram {
 		myBall = new GOval (getWidth()/2, getWidth()/2, BALL_RADIUS, BALL_RADIUS);
 		myBall.setFilled(true);
 		add(myBall);
+	}
+
+	
+	private void startGame() {
 		
+		double xVel = 5;	
+		double gravity = 3;
+		double yVel =+ gravity;
+	
+		
+		myBall.move(xVel, yVel);
 	}
 	
+	public void MouseClicked (MouseEvent e) {
+		startGame();
+	}
 	
 
 }
