@@ -90,10 +90,10 @@ public class Breakout extends GraphicsProgram {
 		
 		for (int i=0; i<NBRICKS_PER_ROW+1; i++) {
 			
-			for (int j=BRICK_Y_OFFSET; j<NBRICK_ROWS+1; j++) {
+			for (int j=; j<NBRICK_ROWS+1; j++) {
 				
 			rowStart = i * (rowPosition) ;
-		    colStart = j * (colPosition) ;
+		    colStart = j + (colPosition) ;
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
 		add(myBricks);
