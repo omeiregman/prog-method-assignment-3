@@ -117,6 +117,7 @@ public class Breakout extends GraphicsProgram {
 	
 	public void initPaddle(){
 		
+		println (HEIGHT);
 		
 		double paddleX = (WIDTH/2) - (BRICK_WIDTH/2) ; 
 		double paddleY = (HEIGHT - PADDLE_HEIGHT/2)  - PADDLE_Y_OFFSET;
