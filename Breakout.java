@@ -76,8 +76,8 @@ public class Breakout extends GraphicsProgram {
 		println(WIDTH + "  " + HEIGHT);
 		
 		
-		double xCenter = getWidth()/2;
-		double yCenter = getHeight()/2;
+		double xCenter = WIDTH/2;
+		double yCenter = HEIGHT/2;
 		
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
 		double colStart = BRICK_Y_OFFSET;
