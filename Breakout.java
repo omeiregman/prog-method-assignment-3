@@ -119,7 +119,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	public void initPaddle(MouseEvent e){
+	public void initPaddle(){
 		
 			
 		setSize(WIDTH, HEIGHT);
