@@ -64,18 +64,22 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		
 		//GCanvas myCanvas = new GCanvas();
-		setSize(WIDTH, HEIGHT);
+
 		
 		setBricks();
 		initPaddle();
 
 		
 	}
-	private double xCenter = WIDTH/2;
-	private double yCenter = HEIGHT/2;
+	
 
 	public void setBricks(){
-			
+		
+		setSize(WIDTH, HEIGHT);
+		
+		double xCenter = getWidth()/2;
+		double yCenter = HEIGHT/2;
+		
 		println(xCenter + "  " + yCenter + BRICK_WIDTH);
 		
 		double rowStart = xCenter - (BRICK_WIDTH * NBRICKS_PER_ROW)/2;
