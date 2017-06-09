@@ -92,8 +92,8 @@ public class Breakout extends GraphicsProgram {
 			
 			for (int j=1; j<NBRICK_ROWS+1; j++) {
 				
-			rowStart = i * (rowPosition) * (BRICK_HEIGHT+BRICK_SEP);
-		    colStart = j * (colPosition);
+			rowStart = i * (rowPosition) * (BRICK_WIDTH + BRICK_SEP);
+		    colStart = j * (colPosition) ;
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
 		add(myBricks);
