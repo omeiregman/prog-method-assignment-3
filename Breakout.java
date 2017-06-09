@@ -129,17 +129,20 @@ public class Breakout extends GraphicsProgram {
 		myPaddle.setColor(Color.BLACK);
 		add(myPaddle);
 			
-	
+		//if ((e.getX() &lt; getWidth() - PADDLE_WIDTH/2) &amp;&amp; (e.getX() &gt; PADDLE_WIDTH/2)) {
+         //   paddle.setLocation(lastX - PADDLE_WIDTH/2, getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT);
 	}
 	
 	public void mouseMove(MouseEvent e) {
 	double paddleY = getHeight() - PADDLE_Y_OFFSET;
 	double mousePosition = e.getX();
 	
-	if(mousePosition <= ((getWidth()/2)+PADDLE_WIDTH)){
-	myPaddle.setLocation(e.getX(), paddleY);
+	if(e.getX() <= ((getWidth() - PADDLE_WIDTH)) && (e.getX() >= PADDLE_WIDTH/2)) {
+		myPaddle.setLocation((mousePosition - PADDLE_WIDTH/2), paddleY);
 	}
+		
 	}
+
 	
 	
 
