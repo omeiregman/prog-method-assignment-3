@@ -135,9 +135,11 @@ public class Breakout extends GraphicsProgram {
 	
 	double paddleY = getHeight() - PADDLE_Y_OFFSET;
 	myPaddle.setLocation(e.getX(), paddleY);
-		
+	println (getX());
+	//label.setLabel(str);	
 	}
 	
 	private GRect myPaddle;
+	private GLabel label;
 }
 
