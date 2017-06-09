@@ -78,7 +78,7 @@ public class Breakout extends GraphicsProgram {
 		setSize(WIDTH, HEIGHT);
 		
 		double xCenter = getWidth()/2;
-		double yCenter = HEIGHT/2;
+		double yCenter = getHeight()/2;
 		
 		println(xCenter + "  " + yCenter + BRICK_WIDTH);
 		
