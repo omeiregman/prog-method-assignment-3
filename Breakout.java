@@ -145,6 +145,7 @@ public class Breakout extends GraphicsProgram {
 		myBall = new GOval (getWidth()/2, getWidth()/2, BALL_RADIUS, BALL_RADIUS);
 		myBall.setFilled(true);
 		add(myBall);
+		addMouseListeners();
 	}
 
 	
