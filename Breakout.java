@@ -110,11 +110,11 @@ public class Breakout extends GraphicsProgram {
 		}
 		if (j == 9 || j == 10){
 			myBricks.setColor(Color.CYAN);		
-		}
+			}
 			
 		}
-		}
 	}
+}
 	
 	public void initPaddle(){
 		
@@ -124,14 +124,13 @@ public class Breakout extends GraphicsProgram {
 		double paddleX = (getWidth()/2) - (PADDLE_WIDTH/2); 
 		double paddleY = getHeight() - PADDLE_Y_OFFSET;
 		
-		myPaddle = new GRect (paddleX, paddleY, PADDLE_WIDTH, PADDLE_HEIGHT);
+		myPaddle = new GRect (getX(), getY(), PADDLE_WIDTH, PADDLE_HEIGHT);
 		myPaddle.setFilled(true);
 		myPaddle.setColor(Color.BLACK);
 		add(myPaddle);
 			
 	
 	}
-	
 	public void mouseEvent(MouseEvent e) {
 	myPaddle.setLocation(getX(), getY());
 		
