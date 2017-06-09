@@ -74,7 +74,6 @@ public class Breakout extends GraphicsProgram {
 		putBall();
 		startGame();
 
-		
 	}
 	
 	public void setBricks(){
