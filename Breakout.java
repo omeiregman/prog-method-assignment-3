@@ -78,11 +78,10 @@ public class Breakout extends GraphicsProgram {
 		setSize(WIDTH, HEIGHT);
 		
 		double xCenter = getWidth()/2;
-		double yCenter = getHeight()/2;
-		
+			
 				
 		double rowStart;
-		double colStart = (xCenter - BRICK_WIDTH * NBRICKS_PER_ROW)/2;
+		double colStart;
 		
 		double rowPosition = BRICK_WIDTH + BRICK_SEP;
 		double colPosition = BRICK_HEIGHT + BRICK_SEP;
