@@ -135,7 +135,7 @@ public class Breakout extends GraphicsProgram {
 	
 	double paddleY = getHeight() - PADDLE_Y_OFFSET;
 	myPaddle.setLocation(e.getX(), paddleY);
-	println (getX());
+	println(" mouse: " + getX());
 	//label.setLabel(str);	
 	}
 	
