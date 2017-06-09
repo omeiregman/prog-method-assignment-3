@@ -119,7 +119,7 @@ public class Breakout extends GraphicsProgram {
 	public void initPaddle(){
 		
 			
-		setSize(WIDTH, HEIGHT);
+		
 		
 		double paddleX = (getWidth()/2) - (PADDLE_WIDTH/2); 
 		double paddleY = getHeight() - PADDLE_Y_OFFSET;
@@ -132,11 +132,11 @@ public class Breakout extends GraphicsProgram {
 	
 	}
 	public void mouseMove(MouseEvent e) {
-	
+	setSize(WIDTH, HEIGHT);
 	double paddleY = getHeight() - PADDLE_Y_OFFSET;
 	myPaddle.setLocation(e.getX(), paddleY);
-	println(" mouse: " + getX());
-	//label.setLabel(str);	
+
+	//label.setLabel(str);
 	}
 	
 	private GRect myPaddle;
