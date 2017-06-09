@@ -80,19 +80,19 @@ public class Breakout extends GraphicsProgram {
 		double xCenter = getWidth()/2;
 		double yCenter = getHeight()/2;
 		
-	//	println(xCenter + "  " + yCenter + BRICK_WIDTH);
+		println(xCenter + "  " + yCenter + BRICK_WIDTH);
 		
 		double rowStart = BRICK_Y_OFFSET;
 		double colStart = (xCenter - BRICK_WIDTH * NBRICKS_PER_ROW)/2;
 		
-		double rowPosition = 1;
+		double rowPosition = BRICK_WIDTH + BRICK_SEP;
 		double colPosition = BRICK_HEIGHT + BRICK_SEP;
 		
 		for (int i=1; i<NBRICKS_PER_ROW+1; i++) {
 			
 			for (int j=1; j<NBRICK_ROWS+1; j++) {
 				
-			rowStart = i * (rowPosition) * (BRICK_HEIGHT+BRICK_SEP);
+			rowStart = i * (rowPosition);
 		    colStart = j * (colPosition);
 		    
 		GRect myBricks = new GRect (rowStart, colStart, BRICK_WIDTH, BRICK_HEIGHT);
