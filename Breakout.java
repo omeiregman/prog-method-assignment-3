@@ -71,6 +71,7 @@ public class Breakout extends GraphicsProgram {
 		
 		setBricks();
 		initPaddle();
+		putBall();
 		
 
 		
