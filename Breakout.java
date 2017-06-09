@@ -120,7 +120,7 @@ public class Breakout extends GraphicsProgram {
 	
 	public void initPaddle(){
 		
-		println (HEIGHT);
+	
 		setSize(WIDTH, HEIGHT);
 		
 		double paddleX = (getWidth()/2) - (PADDLE_WIDTH/2); 
