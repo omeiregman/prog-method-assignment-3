@@ -73,7 +73,7 @@ public class Breakout extends GraphicsProgram {
 		
 	//	GCanvas myCanvas = new GCanvas();
 	setSize(WIDTH, HEIGHT);
-		
+		println(WIDTH + "  " + HEIGHT);
 		
 		
 		double xCenter = getWidth()/2;
