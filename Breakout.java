@@ -56,6 +56,8 @@ public class Breakout extends GraphicsProgram {
 
 /** Number of turns */
 	private static final int NTURNS = 3;
+	
+	private GRect myPaddle;
 
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -72,8 +74,7 @@ public class Breakout extends GraphicsProgram {
 
 		
 	}
-	private GRect myPaddle;
-
+	
 	public void setBricks(){
 		
 		setSize(WIDTH, HEIGHT);
@@ -132,8 +133,8 @@ public class Breakout extends GraphicsProgram {
 	public void mouseMove(MouseEvent e) {
 	double paddleY = getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT;
 	
-	if((e.getX() > 0) && (e.getX() < PADDLE_WIDTH)) {
-		myPaddle.setLocation((getX()), paddleY);
+	if((e.getX() >= 0) && (e.getX() < getWidth() - PADDLE_WIDTH)) {
+		myPaddle.setLocation((e.getX()), paddleY);
 	}
 		
 	}
