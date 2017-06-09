@@ -90,7 +90,7 @@ public class Breakout extends GraphicsProgram {
 		
 		for (int i=0; i<NBRICKS_PER_ROW+1; i++) {
 			
-			for (int j=BRICK_Y_OFFSET; j<NBRICK_ROWS+1; j++) {
+			for (int j=1; j<NBRICK_ROWS+1; j++) {
 				
 			rowStart = i * (rowPosition) ;
 		    colStart = j + (colPosition) ;
