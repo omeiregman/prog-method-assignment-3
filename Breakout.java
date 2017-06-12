@@ -171,12 +171,12 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
+
+    		 
 	private void moveBall() {
 		myBall.move(xVel, yVel);
-		if (myBall.getY() <= 0) yVel *= 1;
-		if((myBall.getX() + BALL_RADIUS * 2) >= getWidth() || myBall.getX() <= 0) {
-			xVel *= -1;
-		}
+		if (myBall.getY() <= 0) yVel *= -1;
+		if((myBall.getX() + BALL_RADIUS * 2) >= getWidth() || myBall.getX() <= 0) xVel *= -1;
 	}
 	
 
