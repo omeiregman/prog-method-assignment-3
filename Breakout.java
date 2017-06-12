@@ -59,7 +59,8 @@ public class Breakout extends GraphicsProgram {
 	
 	private GRect myPaddle;
 	private GOval myBall;
-
+	private RandomGenerator rgen = new RandomGenerator();
+	private double xVel, yVel;
 /* Method: run() */
 /** Runs the Breakout program. */
 	
@@ -149,13 +150,21 @@ public class Breakout extends GraphicsProgram {
 
 	
 	private void startGame() {
+		getBallVelocity();
 		
 		
 	}
 	
+	
+	private void getBallVelocity() {
+		xVel = rgen.nextDouble(1.0, 3.0);
+		yVel = 4.0;
+		if  (rgen.nextBoolean(0.5)){
+			xVel = -xVel;
+		}
+	}
 	public void MouseClicked (MouseEvent e) {
-		
-		
+
 		double xVel = 5;	
 		double gravity = 3;
 		double yVel =+ gravity;
