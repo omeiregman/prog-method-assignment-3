@@ -173,7 +173,7 @@ public class Breakout extends GraphicsProgram {
 	
 	private void moveBall() {
 		myBall.move(xVel, yVel);
-		if((myBall.getX() - xVel == (getWidth()-BALL_RADIUS * 2) && xVel >0)) {
+		if((myBall.getX() - xVel == (getWidth()-BALL_RADIUS * 2) && xVel >=0)) {
 			xVel = -xVel;
 		}
 	}
