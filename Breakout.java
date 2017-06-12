@@ -150,19 +150,30 @@ public class Breakout extends GraphicsProgram {
 
 	
 	private void startGame() {
-		getBallVelocity();
+		getBallVel();
+		while (true) {
+			moveBall();
+			if (ball.getY() >= getHeight()) {
+				break;
+			}
+		}
 		
 		
 	}
 	
 	
-	private void getBallVelocity() {
+	private void getBallVel() {
 		xVel = rgen.nextDouble(1.0, 3.0);
 		yVel = 4.0;
 		if  (rgen.nextBoolean(0.5)){
 			xVel = -xVel;
 		}
 	}
+	
+	private void moveBall() {
+		
+	}
+	
 	public void MouseClicked (MouseEvent e) {
 
 		double xVel = 5;	
