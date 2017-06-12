@@ -61,6 +61,8 @@ public class Breakout extends GraphicsProgram {
 	private GOval myBall;
 	private RandomGenerator rgen = new RandomGenerator();
 	private double xVel, yVel;
+	private int turn = 0;
+	private int brickCounter = 0;
 /* Method: run() */
 /** Runs the Breakout program. */
 	
@@ -150,16 +152,20 @@ public class Breakout extends GraphicsProgram {
 
 	
 	private void startGame() {
+		while (turn < NTURNS){
 		waitForClick();
 		getBallVel();
-		while (true) {
-			moveBall();
-			//if (myBall.getY() >= getHeight()) {
-				//break;
-			//}
+        while (brickCounter < TOTAL_BRICKS){
+            moveBall();
+            checkForCollision();
+            pause(50);
+            if (myBall.getY() == getHeight() - BALL_RADIUS*2){
+                remove(myBall);
+                turn ++;
+                break;		}
+        	}
 		}
 	}
-	
 	
 	private void getBallVel() {
 		xVel = rgen.nextDouble(1.0, 15.0);
@@ -177,7 +183,25 @@ public class Breakout extends GraphicsProgram {
 		if((myBall.getX() + BALL_RADIUS * 2) >= getWidth() || myBall.getX() <= 0) xVel *= -1;
 	}
 	
-
-	
+    private void checkForCollision(){
+        GObject collider = getCollidingObject();
+        if (collider == myPaddle){
+            yVel*=-1;
+        }
+        else if (collider != null){
+            yVel*=-1;
+            remove(collider);
+            brickCounter++;
+        }
+    }
+    // captures the object with which the ball has just collide
+    private GObject getCollidingObject(){
+        if (getElementAt(myBall.getX(), myBall.getY()) != null)  return getElementAt(myBall.getX(), myBall.getY());
+        else if (getElementAt(myBall.getX() + 2*BALL_RADIUS, myBall.getY()) != null) return getElementAt(myBall.getX() + 2*BALL_RADIUS, myBall.getY()); 
+        else if (getElementAt(myBall.getX(), myBall.getY() + 2*BALL_RADIUS) != null) return getElementAt(myBall.getX(), myBall.getY() + 2*BALL_RADIUS);
+        else if (getElementAt(myBall.getX() + 2*BALL_RADIUS, myBall.getY() + 2*BALL_RADIUS) != null) return getElementAt(myBall.getX() + 2*BALL_RADIUS, myBall.getY() + 2*BALL_RADIUS);
+        else return null;
+    }
+ 	
 
 }
