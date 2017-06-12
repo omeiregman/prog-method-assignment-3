@@ -156,7 +156,7 @@ public class Breakout extends GraphicsProgram {
 			moveBall();
 			//if (myBall.getY() >= getHeight()) {
 				//break;
-			}
+			//}
 		}
 	}
 	
