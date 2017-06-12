@@ -155,8 +155,7 @@ public class Breakout extends GraphicsProgram {
 		while (turn < NTURNS){
 		waitForClick();
 		getBallVel();
-        while (brickCounter < TOTAL_BRICKS){
-            moveBall();
+        while (brickCounter < (NBRICK_ROW * NBRICKS_PER_ROW
             checkForCollision();
             pause(50);
             if (myBall.getY() == getHeight() - BALL_RADIUS*2){
