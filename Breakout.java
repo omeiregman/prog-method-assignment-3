@@ -178,13 +178,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	public void MouseClicked (MouseEvent e) {
 
-		double xVel = 5;	
-		double gravity = 3;
-		double yVel =+ gravity;
-		myBall.move(xVel, yVel);
-	}
 	
 
 }
