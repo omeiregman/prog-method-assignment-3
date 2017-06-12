@@ -154,12 +154,10 @@ public class Breakout extends GraphicsProgram {
 		getBallVel();
 		while (true) {
 			moveBall();
-			if (myBall.getY() >= getHeight()) {
-				break;
+			//if (myBall.getY() >= getHeight()) {
+				//break;
 			}
 		}
-		
-		
 	}
 	
 	
