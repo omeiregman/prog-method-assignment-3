@@ -164,8 +164,8 @@ public class Breakout extends GraphicsProgram {
 	
 	
 	private void getBallVel() {
-		xVel = rgen.nextDouble(1.0, 3.0);
-		yVel = 3.0;
+		xVel = rgen.nextDouble(1.0, 15.0);
+		yVel = 10.0;
 		if  (rgen.nextBoolean(0.5)){
 			xVel = -xVel;
 		}
