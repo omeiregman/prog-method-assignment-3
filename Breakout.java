@@ -156,12 +156,14 @@ public class Breakout extends GraphicsProgram {
 		waitForClick();
 		getBallVel();
         while (brickCounter < (NBRICK_ROWS * NBRICKS_PER_ROW)){
+        	moveBall();
             checkForCollision();
             pause(50);
             if (myBall.getY() == getHeight() - BALL_RADIUS*2){
                 remove(myBall);
                 turn ++;
-                break;		}
+                break;		
+                }
         	}
 		}
 	}
